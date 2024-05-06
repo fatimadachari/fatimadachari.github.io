@@ -8,68 +8,44 @@
 
 body {
     min-height: 100vh;
-    padding: 0 100px;
     display: flex;
     justify-content: center;
     flex-direction: column;
     font-family: "Poppins", sans-serif;
-    transition: 0.5s;
+    background-color: #f3f3f3;
 }
 
-.light-mode {
-    background-color: rgb(240, 240, 240);
-    color: #333;
+h1 {
+    font-size: 30px;
+    color: #634293;
 }
 
-.dark-mode {
-    background-color: #252525;
-    color: rgb(240, 240, 240);
+h2 {
+    font-size: 26px;
+    color: #634293;
+}
+
+h3 {
+    font-size: 20px;
+    color: #E5A6F4
+}
+
+h4 {
+    font-size: 18px;
+    color: #F4F995;
+}
+
+p,
+ul {
+    font-size: 16px;
+    color: #272727;
 }
 
 
-#theme-toggle {
-    position: relative;
-    display: block;
-    width: 80px;
-    height: 25px;
-    border-radius: 60px;
-    background: #222;
-    transition: 0.5s;
-    cursor: pointer;
-    box-shadow: inset 0 8px 60px rgba(0, 0, 0, 0.1),
-                inset 0 8px 8px rgba(0, 0, 0, 0.1),
-                inset 0 -4px 4px rgba(0, 0, 0, 0.1);
-}
-
-#theme-toggle .indicator {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 25px;
-    height: 25px;
-    background: linear-gradient(to bottom, #444, #222);
-    border-radius: 50%;
-    transform: scale(0.9);
-    transition: 0.5s;
-}
-
-.light-mode #theme-toggle {
-    background-color: rgb(255, 255, 255);
-    box-shadow: inset 0 2px 60px rgba(0, 0, 0, 0.1),
-                inset 0 2px 8px rgba(0, 0, 0, 0.1),
-                inset 0 -4px 8px rgba(0, 0, 0, 0.05);
-}
-
-.light-mode #theme-toggle .indicator {
-    left: 55px;
-    background: linear-gradient(to bottom, #f3f2f2, #f3f2f2);
-}
-
-/**************/
+/* CARD */
 #card {
-    margin: 30px 0;
+    padding: 30PX 100px;
 }
-
 
 #card_header {
     display: flex;
@@ -80,7 +56,6 @@ body {
 #card_title,
 #card_body {
     background-color: white;
-    /*box-shadow: 0px 10px 15px 5px rgba(0,0,0,0.1);*/
 }
 
 #card_title {
@@ -101,15 +76,25 @@ body {
     clip-path: polygon(0 0, 93% 0, 100% 100%, 0 100%);
 }
 
-#card_title h2 {
+#card_title span {
     font-weight: 400;
+    font-size: 14px;
 }
 
-/*************/
-
 #card_body {
+    padding: 20px;
     display: flex;
-    padding: 0 10px;
+}
+
+#card_body h1 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#card_body h2 {
+    color: #E5A6F4;
+    text-align: center;
+    margin-bottom: 50px;
 }
 
 #card_body img#eu {
@@ -118,38 +103,168 @@ body {
     margin: 50px 0px;
 }
 
-#card_body h2 {
-    color: gray;
+#menu {
+    display: flex;
+    justify-content: right;
+}
+
+#menu ul {
+    display: flex;
+    list-style: none;
+}
+
+#menu ul li {
+    margin: 0 10px;
+}
+
+#menu ul li a {
+    text-decoration: none;
+    color: #634293;
+    font-weight: 500;
+}
+
+#menu ul li a:hover {
+    color: #E5A6F4;
+}
+
+#card_body h3 {
+    color: #634293;
     text-transform: lowercase;
     margin-left: 50px;
     z-index: 1;
 }
 
 #card_body #resumo {
-    background-color: rgb(240, 240, 240);
+    background-color: #d7cce7;
     padding: 15px;
     border-radius: 10px;
     margin-top: -15px;
 }
 
-.dark-mode #card_body #resumo {
-    background-color: #222;
+/* SOBRE */
+
+#sobre {
+    padding: 30px 100px;
 }
 
-#context {
+#sobre a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #634293;
+}
+
+#sobre a:hover {
+    text-decoration: underline;
+}
+
+/* EXPERIENCIA */
+
+#experiencia {
     display: flex;
-    justify-content: center;
     flex-direction: column;
+    align-items: center;
+    padding: 30px;
 }
 
-#card_body img#texto {
-    width: 500px;
-    height: auto;
-    margin: 0 auto;
-}
-
-/******/
-
-section {
+#experiencia .card {
+    background-color: #634293;
+    border-radius: 10px;
     margin: 20px 0;
+    padding: 20px;
+    width: 500px;
+    box-shadow: 0px 10px 22px 9px rgba(0, 0, 0, 0.1);
+}
+
+#experiencia .card.right {
+    margin-left: 30%;
+}
+
+#experiencia .card.left {
+    margin-right: 30%;
+}
+
+#experiencia .card ul {
+    list-style: none;
+    color: #f3f2f2;
+}
+
+#experiencia .card p {
+    color: #f3f2f2;
+}
+
+#experiencia .card span {
+    font-weight: bold;
+}
+
+/* SKILLS */
+#skills {
+    padding: 30px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#skills i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    background-color: #634293;
+    color: #fff;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+/* PROJETOS */
+
+#projetos {
+    background-color: #634293;
+    padding: 30px 100px;
+    text-align: center;
+    box-shadow: 0px 10px 22px 9px rgba(0, 0, 0, 0.1);
+}
+
+#projetos .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#projetos h2 {
+    color: #F4F995;
+}
+
+#projetos p {
+    color: #fff;
+}
+
+#projetos a {
+    color: #E5A6F4;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#projetos a:hover {
+    text-decoration: underline;
+}
+
+/* CONTATO */
+#contato {
+    padding: 30px 100px;
+    text-align: center;
+}
+
+#contato ul li{
+    list-style: none;
+    padding: 5px 0;
+}
+
+#contato a {
+    text-decoration: none;
+    color: #634293;
+}
+
+#contato i {
+    font-size: 18px;
 }
